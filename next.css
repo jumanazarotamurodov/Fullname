@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 2, 22) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+body::before{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: linear-gradient(rgb(81, 255, 0),rgb(68, 0, 255));
+    position: absolute;
+    content: '';
+    right: -100px;
+    bottom: -200px;
+    animation: animate 50s linear infinite;
+}
+body::after{
+    width: 700px;
+    height: 700px;
+    border-radius: 50px;
+    background: linear-gradient(rgb(255, 0, 0),rgb(255, 136, 0));
+    position: absolute;
+    content: '';
+    left: -100px;
+    top: -200px;
+    animation: animate 50s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotateZ(0);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+.container{
+    width: 800px;
+    height: 400px;
+    box-shadow: 5px 5px 100px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 11;
+    border-radius: 20px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+
+}
+.container:hover{
+    backdrop-filter: blur(10px);
+}
+h1{
+    top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    position: absolute;
+}
+input{
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: transparent;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid white;
+    backdrop-filter: blur(10px);
+    color: white;
+    position: absolute;
+    margin-top: -50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.button{
+    width: 50px;
+    height: 40px;
+    background: transparent;
+    border: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    margin-left: 350px;
+    border: 1px solid white;
+}
+
+.in2{
+    margin-top: 50px;
+}
+.in3{
+    margin-top: 150px;
+}
+span{
+    margin-top: 300px;
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+}
